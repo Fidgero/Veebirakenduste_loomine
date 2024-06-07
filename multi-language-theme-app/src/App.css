@@ -1,0 +1,83 @@
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.light {
+  --bg-color: white;
+  --text-color: black;
+  --header-footer-bg: #f1f1f1;
+  --header-footer-text: black;
+}
+
+.dark {
+  --bg-color: black;
+  --text-color: white;
+  --header-footer-bg: #333;
+  --header-footer-text: white;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header, .footer {
+  background-color: var(--header-footer-bg);
+  color: var(--header-footer-text);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  flex: 1;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: relative;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  position: relative; /* Changed to relative */
+  top: 10px;
+  width: calc(100% - 40px); /* Adjusted width to account for padding of .main */
+  padding: 0 20px; /* Adjusted padding to match the padding of .main */
+}
+
+
+.language-selector, .theme-switch {
+  margin: 0;
+}
+
+.content {
+  margin-top: 60px; /* Adjust this to position the main text below the buttons */
+}
+
+@media (max-width: 600px) {
+  .header, .footer {
+    padding: 10px;
+  }
+
+  .main {
+    padding: 10px;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: center;
+    top: 5px;
+    padding: 0;
+  }
+
+  .content {
+    margin-top: 80px; /* Adjust this to position the main text below the buttons on smaller screens */
+  }
+}

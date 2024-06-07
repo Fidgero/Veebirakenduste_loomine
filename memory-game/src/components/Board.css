@@ -1,0 +1,8 @@
+/* src/components/Board.css */
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Adjust columns as needed */
+  gap: 15px; /* Increase gap between cards */
+  justify-content: center; /* Center the board horizontally */
+  margin: 20px auto; /* Center the board vertically */
+}

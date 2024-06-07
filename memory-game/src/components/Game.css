@@ -1,0 +1,15 @@
+/* src/components/Game.css */
+.game {
+  text-align: center;
+  padding: 20px;
+}
+
+.game-over {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
